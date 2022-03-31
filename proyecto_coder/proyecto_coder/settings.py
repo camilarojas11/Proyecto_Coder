@@ -55,7 +55,7 @@ ROOT_URLCONF = 'proyecto_coder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/camil/OneDrive/Escritorio/Python/Entrega_Intermedia/proyecto_coder/appcoder/templates'],
+        'DIRS': ['C:/Users/camil/OneDrive/Escritorio/Python/Entrega_Intermedia/proyecto_coder/proyecto_coder/proyecto_coder/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

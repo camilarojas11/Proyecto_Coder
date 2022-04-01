@@ -1,0 +1,21 @@
+{% extends 'appcoder/base.html' %}
+
+{% block title_header %}
+    <h1 class="display-5 fw-bolder text-white mb-2">{{h1_servicios}}</h1>
+    <p class="lead text-white-50 mb-4">{{subtitulo_service}}</p>
+{% endblock title_header %}
+
+
+{% block main_content %}
+
+<form action="/servicios/" method="POST" class="form-group my-5">
+
+    {% csrf_token %}
+    <table class="table mb-5">
+        {{miServicio.as_table}}
+    </table>
+
+    <input type="submit" value="Cargar Servicio/Factura" class="btn btn-warning">
+</form>
+
+{% endblock %}

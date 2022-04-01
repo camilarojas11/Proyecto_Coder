@@ -1,13 +1,10 @@
 {% extends 'appcoder/base.html' %}
 
 {% block title_header %} 
-<h1 class="display-5 fw-bolder text-white mb-2">{{h1_index}}</h1>
-<p class="lead text-white-50 mb-4">{{subtitulo_index}}</p>
+<h1 class="display-5 fw-bolder text-white mb-2">{{h1_buscar}}</h1>
+<p class="lead text-white-50 mb-4">{{subtitulo_search}}</p>
 {% endblock title_header %}
 
-{% block btn_header %} 
-<a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Comencemos!</a>
-{% endblock btn_header %}
 
 {% block main_content %}
 
@@ -19,9 +16,9 @@
                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-circle"></i>
                 </div>
                 <h2 class="h4 fw-bolder">{{items.1}}</h2>
-                <p>Aqui podra ingresar usuarios.</p>
+                <p>Buscar Usuarios</p>
                 <a class="text-decoration-none" href="#!">
-                    Agregar Usuario
+                    Buscar
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -29,9 +26,9 @@
                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-receipt"></i>
                 </div>
                 <h2 class="h4 fw-bolder">{{items.2}}</h2>
-                <p>En esta sección, podra ingresar los servicios/facturas pendientes de abonar.</p>
+                <p>Buscar Servicio/Factura</p>
                 <a class="text-decoration-none" href="#!">
-                    Agregar servicio/factura
+                    Buscar
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -39,9 +36,9 @@
                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-credit-card"></i>
                 </div>
                 <h2 class="h4 fw-bolder">{{items.3}}</h2>
-                <p>Aquí podra ingresar los pagos efectuados.</p>
+                <p>Buscar Pagos</p>
                 <a class="text-decoration-none" href="#!">
-                    Agregar Pago
+                    Buscar
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>

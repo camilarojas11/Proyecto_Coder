@@ -67,6 +67,13 @@ def pagos(request):
     dict_context = {'id': id, 'h1_pagos': h1_pagos, 'items': items, 'subtitulo_pagos': subtitulo_pagos, 'logo': logo}
     return render(request, 'appcoder/pagos.html', dict_context)
 
+def buscar(request):
+    id = 5
+    h1_buscar = "Página de Busquedas"
+    subtitulo_search = "Haga clic en el acceso directo según lo que desee buscar."
+    dict_context = {'id': id, 'h1_buscar': h1_buscar, 'items': items, 'subtitulo_search':subtitulo_search, 'logo': logo}
+    return render(request, 'appcoder/buscar.html',dict_context)
+
 def buscarUsuario(request):
     data = request.GET.get('dni', "")
     error = ""
@@ -78,7 +85,7 @@ def buscarUsuario(request):
 
         except Exception as exc:
             print(exc)
-            error = "No existe ese usuario. Por favor intente nuevamente."
+            error = "No existe el usuario ingresado. Por favor intente nuevamente."
     return render(request, 'appcoder/buscarUsuario.html', {"error": error})
 
 
@@ -88,10 +95,10 @@ def buscarServicio(request):
 
     if data:
         try:
-            usuario = Usuario.objects.get(dni = data)
-            return render(request, 'appcoder/buscarUsuario.html', {"usuario": usuario, "id": data})
+            servicio = Servicio.objects.get(dni = data)
+            return render(request, 'appcoder/buscarServicio.html', {"servicio": servicio, "id": data})
 
         except Exception as exc:
             print(exc)
-            error = "No existe ese usuario. Por favor intente nuevamente."
-    return render(request, 'appcoder/buscarUsuario.html', {"error": error})
+            error = "No existe la factura y/o servicio con el n° de cliente ingresado. Por favor intente nuevamente."
+    return render(request, 'appcoder/buscarServicio.html', {"error": error})

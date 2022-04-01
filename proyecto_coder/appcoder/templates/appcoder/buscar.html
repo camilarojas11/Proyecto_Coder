@@ -1,0 +1,48 @@
+{% extends 'appcoder/base.html' %}
+
+{% block title_header %} 
+<h1 class="display-5 fw-bolder text-white mb-2">{{h1_buscar}}</h1>
+<p class="lead text-white-50 mb-4">{{subtitulo_search}}</p>
+{% endblock title_header %}
+
+
+{% block main_content %}
+
+<!-- Features section-->
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-circle"></i>
+                </div>
+                <h2 class="h4 fw-bolder">{{items.1}}</h2>
+                <p>Buscar Usuarios</p>
+                <a class="text-decoration-none" href="{% url 'buscar_usuario' %}">
+                    Buscar
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-receipt"></i>
+                </div>
+                <h2 class="h4 fw-bolder">{{items.2}}</h2>
+                <p>Buscar Servicio/Factura</p>
+                <a class="text-decoration-none" disabled>
+                    No Disponible
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-credit-card"></i>
+                </div>
+                <h2 class="h4 fw-bolder">{{items.3}}</h2>
+                <p>Buscar Pagos</p>
+                <a class="text-decoration-none" disabled">
+                    No Disponible
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

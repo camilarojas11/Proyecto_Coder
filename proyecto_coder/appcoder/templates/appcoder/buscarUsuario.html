@@ -1,0 +1,47 @@
+{% extends 'appcoder/base.html' %}
+
+{% block title_header %}
+    <h1 class="display-5 fw-bolder text-white mb-2">{{h1_buscar}}</h1>
+    <p class="lead text-white-50 mb-4">{{subtitulo_search}}</p>
+{% endblock title_header %}
+
+
+{% block main_content %}
+
+<form action="/buscar_usuario/" method="get" class="form-group my-5 text-center">
+        
+    <b>Ingrese DNI <input type="number" name="dni"></b>
+
+    <input type="submit" value="Buscar" class= "btn btn-warning">
+
+</form>
+
+{% if error %}<p style="color:red">{{error}}</p>{% endif %}
+
+{% if usuario %}
+
+<div class="container mt-5 mb-5">
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th class="table-success">Nombre</th>
+                <th class="table-success">Apellido</th>
+                <th class="table-success">DNI</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>{{usuario.nombre}}</td>
+                <td>{{usuario.apellido}}</td>
+                <td>{{usuario.dni}}</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div> 
+{% endif %}
+{% endblock %}

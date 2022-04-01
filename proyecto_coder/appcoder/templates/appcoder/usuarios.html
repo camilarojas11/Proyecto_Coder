@@ -1,0 +1,20 @@
+{% extends 'appcoder/base.html' %}
+
+{% block title_header %}
+    <h1 class="display-5 fw-bolder text-white mb-2">{{h1_usuarios}}</h1>
+    <p class="lead text-white-50 mb-4">{{subtitulo_user}}</p>
+{% endblock title_header %}
+
+
+{% block main_content %}
+
+<form action="/usuarios/" method="POST" class="form-group my-5">
+
+    {% csrf_token %}
+    <table class="table mb-5">
+        {{miUsuario.as_table}}
+    </table>
+
+    <input type="submit" value="Cargar Usuario" class="btn btn-warning">
+</form>
+{% endblock %}

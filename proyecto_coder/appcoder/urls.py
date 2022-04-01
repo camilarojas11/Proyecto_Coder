@@ -10,4 +10,5 @@ urlpatterns = [
     path('servicios/', servicios, name= "cargar_servicio"),
     path('pagos/', pagos, name= "agendar_pagos"),
     path('buscar/', buscar, name= 'buscar'),
+    path('buscar_usuario/', buscarUsuario, name= "buscar_usuario"),
 ]

@@ -10,6 +10,6 @@ class ServiceFormulario(forms.Form):
     importe_factura = forms.FloatField()
 
 class PagoFormulario(forms.Form):
-    numero_comprobante = forms.IntegerField(primary_key=True)
+    numero_comprobante = forms.IntegerField()
     monto_pagado = forms.FloatField()
     check_pago = forms.BooleanField()

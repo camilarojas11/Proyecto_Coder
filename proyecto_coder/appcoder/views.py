@@ -1,12 +1,9 @@
-from operator import sub
 from django.shortcuts import render
 from django.http import HttpResponse
 from appcoder.models import *
 from appcoder.forms import *
 
 # Create your views here.
-
-
 
 logo = "Mi Agenda Coder"
 items = ["Home", "Usuarios", "Servicios", "Pagos", "Buscar"]
@@ -17,7 +14,6 @@ def index(request):
     subtitulo_index = "La función de esta aplicación es poder ayudarte a mantener actualizado el pago de tus facturas."
     dict_context = {'id': id, 'h1_index': h1_index, 'items': items, 'subtitulo_index':subtitulo_index, 'logo': logo}
     return render(request, 'appcoder/index.html',dict_context)
-
 
 
 
@@ -45,8 +41,6 @@ def usuarios(request):
 
 
 
-
-
 def servicios(request):
     id = 3
     h1_servicios = "Cargar Servicios"
@@ -67,8 +61,6 @@ def servicios(request):
     else:
         miServicio = ServiceFormulario()
         return render(request, 'appcoder/servicios.html',{'id': id,'h1_servicios': h1_servicios, 'subtitulo_service': subtitulo_service, 'logo': logo, 'items': items, 'servicios': servicios ,'miServicio': miServicio})
-
-
 
 
 
@@ -95,16 +87,12 @@ def pagos(request):
 
 
 
-
-
 def buscar(request):
     id = 5
     h1_buscar = "Página de Busquedas"
     subtitulo_search = "Haga clic en el acceso directo según lo que desee buscar."
     dict_context = {'id': id, 'h1_buscar': h1_buscar, 'items': items, 'subtitulo_search':subtitulo_search, 'logo': logo}
     return render(request, 'appcoder/buscar.html',dict_context)
-
-
 
 
 
